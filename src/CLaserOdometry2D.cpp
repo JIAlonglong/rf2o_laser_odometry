@@ -293,6 +293,7 @@ void CLaserOdometry2D::createImagePyramid()
         if ((u>1)&&(u<cols_i-2))
         {
           if (dcenter > 0.f)
+          if (std::isfinite(dcenter) && dcenter > 0.f)
           {
             float sum = 0.f;
             float weight = 0.f;
@@ -317,6 +318,7 @@ void CLaserOdometry2D::createImagePyramid()
         else
         {
           if (dcenter > 0.f)
+          if (std::isfinite(dcenter) && dcenter > 0.f)
           {
             float sum = 0.f;
             float weight = 0.f;
